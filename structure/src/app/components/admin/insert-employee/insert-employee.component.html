@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" style="padding-bottom: 5px !important">
+                    <div >
+                        <h5 class="pb-2">{{ "Employee" |translate}}</h5>
+
+                       <span> {{ "Please fill the inputs" |translate}}</span>
+                    </div>
+                    <ng-template >
+                        
+                    </ng-template>
+                </div>
+                <div class="card-body">
+                    <form class="needs-validation" autocomplete="off" 
+                    [formGroup] = "employee"
+                    (ngSubmit)="onSubmit()" 
+                    novalidate>
+                        <div class="form-row">
+                            <!-- name  -->
+                            <div class="col-6 mb-3">
+                                <label for="validation01"><span class="validation-required">*</span> {{ "EnglishName" |translate}}</label>
+                                <input class="form-control" id="validation01" type="text" formControlName="name"
+                                [tooltip]="fc.name.errors?.required ? 'this field is required' : null"
+                                [class.is-valid]="fc.name.valid && (fc.name.touched)"
+                                [class.is-invalid]="fc.name.invalid && (fc.name.touched)"
+                                appDisableWeritingArabic
+                                     required
+                                     placeholder="name"
+                                    containerClass="" />
+                            </div>
+                            <!-- nameAr  -->
+                            <div class="col-6 mb-3">
+                                <label for="validation01"><span class="validation-required">*</span> {{ "username" |translate}}</label>
+                                <input class="form-control" id="validation01" type="text" formControlName="username"
+                                [tooltip]="fc.username.errors?.required ? 'this field is required' : null"
+                                [class.is-valid]="fc.username.valid && (fc.username.touched)"
+                                [class.is-invalid]="fc.username.invalid && (fc.username.touched)"
+                                appDisableWeritingArabic
+                                     required
+                                     placeholder="user"
+                                    containerClass="" />
+                            </div>
+                            <!-- phonenumber  -->
+                            <div class="col-6 mb-3">
+                                <label for="validation01"><span class="validation-required">*</span> {{ "username" |translate}}</label>
+                                <input class="form-control" id="validation01" type="text" formControlName="phonenumber"
+                                [tooltip]="fc.phonenumber.errors?.required ? 'this field is required' : null"
+                                [class.is-valid]="fc.phonenumber.valid && (fc.phonenumber.touched)"
+                                [class.is-invalid]="fc.phonenumber.invalid && (fc.phonenumber.touched)"
+                                onlyNumbers
+                                     required
+                                     placeholder="enter your phone number"
+                                    containerClass="" />
+                            </div>
+                          
+                            <!-- email -->  
+                            <div class="col-6 mb-3">
+                                <label for="validation01"><span class="validation-required">*</span> {{ "email" |translate}}</label>
+                                <input class="form-control" id="validation01" type="email" formControlName="email"
+                                [tooltip]="fc.email.errors?.required ? 'this field is required' : null"
+                                [class.is-valid]="fc.email.valid && (fc.email.touched)"
+                                [class.is-invalid]="fc.email.invalid && (fc.email.touched)"
+                                
+                                     required
+                                     placeholder="example@gmail.com"
+                                    containerClass="" />
+                            </div>
+                            
+                            
+            </div>
+                        
+                       
+                            <button  class="btn  pull-right btn-danger" type="submit">
+                               {{ "Submit" |translate}}
+                            </button>
+                           
+                        <!-- <div *ngIf="update; else elseBlock">
+                            <button class="btn  pull-right" type="submit">
+                                {{ "Update" |translate}}
+                            </button>
+                       </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

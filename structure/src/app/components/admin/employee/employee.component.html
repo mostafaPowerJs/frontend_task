@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-header" style="padding-bottom: 5px !important">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="pb-2">{{ "Employee" |translate}}</h5>
+                    </div>
+                    <div class="col-6 header-titles">
+                      <a routerLink="/content/admin/insertemployee" class="d-block">
+                          <button class="btn pull-right btn-danger" type="button">
+                              <span class="m-2">{{ "Employee" |translate}}</span>
+                              <i class="fa fa-plus"></i>
+                          </button>
+                      </a>
+                  </div>
+                    </div>
+</div>
+
+<div class="container  mt-5 ">
+    <table class="table table-striped p-2">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">user name</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let view of employees ; let x = index" class="px-5">
+            <th scope="row" class="px-2">{{x}}</th>
+            <td>{{view.name}}</td>
+            <td>{{view.username}}</td>
+            <td>{{view.email}}</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    
+</div>
