@@ -23,18 +23,23 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
+            <th scope="col">{{"Name" | translate}}</th>
             <th scope="col">user name</th>
-            <th scope="col">Handle</th>
+            <th scope="col">email</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
 
           <tr *ngFor="let view of employees ; let x = index" class="px-5">
-            <th scope="row" class="px-2">{{x}}</th>
+            <th scope="row" class="px-2 text-danger">{{x}}</th>
             <td>{{view.name}}</td>
             <td>{{view.username}}</td>
             <td>{{view.email}}</td>
+            <td > 
+              <button class="btn pull-right" (click)="update()" style="color: rgba(35, 118, 241, 0.667); padding: 7px" > <i class="fa fa-pencil"></i> </button>
+          <button class="btn  pull-right" (click)="delete()" style="color: red; padding: 7px"> <i class="fa fa-trash"></i></button>
+            </td>
           </tr>
         
         </tbody>

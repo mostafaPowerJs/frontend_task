@@ -20,6 +20,11 @@
       <ul class="nav-menus">
   
         <li>
+          <div class="" (click)="languageToggle()">
+       <app-languages></app-languages>
+          </div>
+        </li>
+        <li>
           <div class="mode" (click)="layoutToggle()">
             <i class="fa fa-moon-o" *ngIf="!dark"></i>
             <i class="fa fa-lightbulb-o" *ngIf="dark"></i>

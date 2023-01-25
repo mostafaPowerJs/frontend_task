@@ -99,7 +99,7 @@ export class NavService implements OnDestroy {
       headTitle2: "Management ",
     },
     {
-      title: "Employees",
+      title: "Employee",
       icon: "activity",
       type: "sub",
       badgeType: "success",

@@ -13,48 +13,18 @@ import { LoginComponent } from "./shared/Models/login/login.component";
 
 const routes: Routes = [
   // {
-  //   path: "SignUp/:role",
-  //   canActivate: [IsNotLoginGuard],
-  //   component: SignUpComponent,
-  // },
-  // {
-  //   path: "login/:role",
-  //   canActivate: [IsNotLoginGuard],
-  //   component: LoginComponent,
-  // },
-  // {
-  //   path: "",
-  //   canActivate: [IsNotLoginGuard],
-  //   component: LoginComponent,
-  // },
-  // {
   //   path: "login",
-  //   canActivate: [IsNotLoginGuard],
   //   component: LoginComponent,
-  // },
-  // {
-  //   path: "",
-  //   component: ViewProductComponent,
-    
-
+  
   //   children: content,
   // },
   {
-    path: "login",
-    component: LoginComponent,
-    canActivate: [IsNotLoginGuard],
-    children: content,
-  },
-  {
     path: "content",
     component: ContentComponent,
-    canActivate: [IsLoginGuard],
+    
     children: content,
   },
-  // {
-  //   path: '**',
-  //   redirectTo: ''
-  // }
+  
 ];
 
 @NgModule({

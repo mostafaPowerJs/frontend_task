@@ -21,7 +21,7 @@ export class LanguagesComponent implements OnInit {
     language: 'Arabic',
     code: 'ar',
     type: 'EG',
-    icon: 'sa'
+    icon: 'eg'
   },
  ]
 
